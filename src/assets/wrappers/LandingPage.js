@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   nav {
@@ -26,14 +26,18 @@ const Wrapper = styled.section`
     line-height: 2;
     color: var(--text-secondary-color);
     margin-bottom: 1.5rem;
+
     max-width: 35em;
   }
+
   .register-link {
     margin-right: 1rem;
   }
+
   .main-img {
     display: none;
   }
+
   .btn {
     padding: 0.75rem 1rem;
   }
