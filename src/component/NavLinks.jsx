@@ -3,7 +3,7 @@ import { useDashboardContext } from "../pages/DashboardLayout";
 import links from "../utils/links";
 import PropTypes from "prop-types";
 
-const NavLinks = ({ path, text, icon }) => {
+const NavLinks = ({ isBigSidebar }) => {
   const { toggleSidebar, user } = useDashboardContext();
   return (
     <div>
@@ -15,7 +15,7 @@ const NavLinks = ({ path, text, icon }) => {
               to={path}
               key={text}
               className="nav-link"
-              onClick={toggleSidebar}
+              onClick={isBigSidebar ? null : toggleSidebar}
               end
             >
               <span className="icon">{icon}</span>
@@ -29,9 +29,7 @@ const NavLinks = ({ path, text, icon }) => {
 };
 
 NavLinks.propTypes = {
-  path: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  isBigSidebar: PropTypes.bool,
 };
 
 export default NavLinks;
